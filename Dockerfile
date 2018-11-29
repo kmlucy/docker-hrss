@@ -14,6 +14,5 @@ ENV BASE_URL="/"
 WORKDIR /hrss
 ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 8000
-VOLUME /hrss/db.sqlite
 
 COPY context_processor.py web/context_processor.py
