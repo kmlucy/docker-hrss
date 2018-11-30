@@ -10,9 +10,7 @@ RUN apk add --no-cache git && \
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
 
-ENV BASE_URL="/"
+ENV BASE_URL="http://localhost:8000"
 WORKDIR /hrss
 ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 8000
-
-COPY context_processor.py web/context_processor.py
