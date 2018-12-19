@@ -6,7 +6,7 @@ python3 manage.py migrate
 # Add base url if set
 if [ "$BASE_URL" != "http://localhost:8000" ]; then
 	BASE_URL_DIR=$(echo "$BASE_URL" | sed -e 's=.*\://==' -e 's=[^/]*==')
-	sed -i -e "s='/static/'='""$BASE_URL_DIR""/static/'=" -e "s=http://localhost:8000=$BASE_URL=" hrss/settings.py
+	sed -i -e "s=http://localhost:8000=$BASE_URL=" hrss/settings.py
 fi
 
 # Allow all connections
